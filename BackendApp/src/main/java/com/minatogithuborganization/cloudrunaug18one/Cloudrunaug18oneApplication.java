@@ -42,6 +42,6 @@ public class Cloudrunaug18oneApplication {
 	
 	@Bean
 	ISearchFilterFormatter searchFilterFormatter() {
-		return null
+		return null;
 	}
 }
