@@ -1,0 +1,3 @@
+com.minatogithuborganization.cloudrunaug18one.config.ApplicationRepositoriesAutoConfiguration
+com.minatogithuborganization.cloudrunaug18one.config.ApplicationTransactionManagersAutoConfig
+com.minatogithuborganization.cloudrunaug18one.config.ApplicationProvidersAutoConfiguration
