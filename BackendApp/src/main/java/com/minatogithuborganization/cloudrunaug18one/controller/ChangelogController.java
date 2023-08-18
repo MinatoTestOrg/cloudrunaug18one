@@ -31,7 +31,8 @@ public class ChangelogController extends BaseWebService<IChangelogBL, Changelog>
 		PaginationRequest request = convertToPaginationRequest(datatableJson);
 		if ("null".equalsIgnoreCase(fieldName)) fieldName = null;
 		PaginationResponse ResponseEntity=new PaginationResponse(request);
-		ResponseEntity.setResults(changeLogList);		
+		// ResponseEntity.setResults(changeLogList);		
+		ResponseEntity.setResults(null);
 		return ResponseEntity;
 	}
 }
