@@ -24,5 +24,4 @@ jobs:
       with:
         CLOUD_RUN_DEFAULT_SERVICE_ACCOUNT: ${{ secrets.CLOUD_RUN_DEFAULT_SERVICE_ACCOUNT }}
         IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
-        VPC_CONNECTOR: ${{ secrets.VPC_CONNECTOR }}
         REGION_ID: ${{ secrets.REGION_ID }}
