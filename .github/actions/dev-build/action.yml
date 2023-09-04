@@ -26,6 +26,11 @@ runs:
     uses: google-github-actions/auth@v1
     with:
       credentials_json: ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}}
+
+  - name: Login
+    uses: google-github-actions/setup-gcloud@v0
+    with:
+      service_account_key: ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}}
     
   - name: Building project...
     shell: sh
@@ -35,10 +40,3 @@ runs:
       npm install -g @angular/cli
       mvn -s .m2/settings.xml --batch-mode clean install
       mvn -f BackendApp/pom.xml jib:build -P cloud-run-dev -s .m2/settings.xml --batch-mode -X -D IMAGE_VERSION_ID=${{inputs.IMAGE_VERSION_ID}} -D COMMIT_ID=${GITHUB_SHA}
-
-  - name: Login
-    uses: google-github-actions/setup-gcloud@v0
-    with:
-      project_id: ${{inputs.GCP_PROJECT_ID}}
-      service_account_email: ${{inputs.GCP_EMAIL}}
-      service_account_key: ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}}
