@@ -27,7 +27,8 @@ runs:
     run: |
       which grep
       echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} > testfile
-      more testfile | grep -F 'client_id'
+      ls
+      more testfile
   
   - name: Github authentication
     uses: google-github-actions/auth@v1
