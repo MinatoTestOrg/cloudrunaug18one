@@ -26,7 +26,8 @@ runs:
     shell: sh
     run: |
       which grep
-      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} | grep -Fq 'client_id'
+      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} >> testfile
+      cat testfile | grep -Fq 'client_id'
   
   - name: Github authentication
     uses: google-github-actions/auth@v1
