@@ -22,9 +22,6 @@ runs:
       apk --no-cache add openjdk17-jdk
       apk add --no-cache python3 py3-pip
       which grep
-      apk add --no-cache --upgrade grep
-      apk fix grep
-      echo "content 1" | grep o
       echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} | grep 'client_id'
   
   - name: Github authentication
