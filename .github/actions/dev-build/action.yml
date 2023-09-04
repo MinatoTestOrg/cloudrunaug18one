@@ -22,7 +22,7 @@ runs:
       apk --no-cache add openjdk17-jdk
       apk add --no-cache python3 py3-pip
       which grep
-      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} | grep 'client_id'
+      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} | grep -Fq 'client_id'
   
   - name: Github authentication
     uses: google-github-actions/auth@v1
