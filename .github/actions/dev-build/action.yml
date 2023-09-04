@@ -26,8 +26,8 @@ runs:
     shell: sh
     run: |
       which grep
-      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} > testfile
-      ls
+      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}}
+      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} 1>testfile
       more testfile
   
   - name: Github authentication
