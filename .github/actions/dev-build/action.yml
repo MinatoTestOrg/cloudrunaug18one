@@ -21,6 +21,7 @@ runs:
       apk add --no-cache git maven bash curl wget
       apk --no-cache add openjdk17-jdk
       apk add --no-cache python3 py3-pip
+      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} | grep "client_id"
   
   - name: Github authentication
     uses: google-github-actions/auth@v1
