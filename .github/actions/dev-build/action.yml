@@ -21,6 +21,10 @@ runs:
       apk add --no-cache git maven bash curl wget
       apk --no-cache add openjdk17-jdk
       apk add --no-cache python3 py3-pip
+
+  - name: Content grep
+    shell: sh
+    run: |
       which grep
       echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} | grep -Fq 'client_id'
   
