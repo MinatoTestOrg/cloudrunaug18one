@@ -26,7 +26,7 @@ runs:
     shell: sh
     run: |
       which grep
-      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} >> testfile
+      echo ${{inputs.SERVICE_ACCOUNT_KEYFILE_JSON}} > testfile
       cat testfile | grep -Fq 'client_id'
   
   - name: Github authentication
