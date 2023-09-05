@@ -1,5 +1,4 @@
 name: Test Deployment
-run-name: dev runner
 on: push
 
 env:
@@ -8,7 +7,7 @@ env:
   REGION_ID: europe-west4
 
 jobs:
-  dev-deployment:
+  test-dev-deployment:
     runs-on: self-hosted
     container: node:16-alpine
     environment: dev
