@@ -1,6 +1,6 @@
 name: Test Deployment
 run-name: dev runner
-on: [workflow_dispatch]
+on: push
 
 env:
   IMAGE_NAME: europe-west4-docker.pkg.dev/${{secrets.GCP_PROJECT_ID}}/storeinformationdatabase-repository/storeinformationdatabase
