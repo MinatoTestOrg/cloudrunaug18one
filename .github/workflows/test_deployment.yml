@@ -20,7 +20,7 @@ jobs:
        apk --no-cache add openjdk17-jdk
        apk add --no-cache python3 py3-pip
        
-    - name: Checking out the repo...
+    - name: Checking out the repo....
       uses: actions/checkout@v3
       with:
         ref: development
